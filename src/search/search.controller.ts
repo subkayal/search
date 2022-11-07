@@ -1,4 +1,7 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { SearchService } from './search.service';
 
-@Controller('search')
-export class SearchController {}
+@Controller('/search')
+export class SearchController {
+  constructor(private searchService: SearchService) {}
+}
